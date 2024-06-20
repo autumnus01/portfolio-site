@@ -1,0 +1,80 @@
+/*Stylesheet by Autumn Hurley*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+/*SITEWIDE STYLING RULES*/
+
+/*general*/
+body{
+    /*redo using grid layout*/
+    background-color: black;
+    font-family: 'Source Code Pro';
+    color: white;
+}
+
+h1, h2, h3, h4{
+    color: white;
+}
+
+h1{
+    font-weight: 500;
+}
+h2{
+    font-weight: 400;
+}
+
+ul{
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*divs*/
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 50px;
+}
+.main-content ul{
+    list-style-type: none;
+}
+.main-content li{
+    transition: 0.3s;
+}
+.main-content li:hover{
+    color: lightgray;
+    translate: 5px 0px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+}
+.header ul{
+    list-style-type: none;
+}
+.header li{
+    display: inline;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+.header li:hover{
+    text-decoration: underline;
+    background-color: rgb(70, 70, 70);
+}
+.header a h1, .header a h2{
+    display: inline-block;
+}
+
+
+/*PAGE-SPECIFIC: index.html*/
+/*PAGE-SPECIFIC: about.html*/
