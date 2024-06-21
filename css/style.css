@@ -1,13 +1,12 @@
 /*Stylesheet by Autumn Hurley*/
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 /*SITEWIDE STYLING RULES*/
 
 /*general*/
 body{
     /*redo using grid layout*/
-    background-color: black;
-    font-family: 'Source Code Pro';
+    font-family: 'Roboto Mono';
     color: white;
 }
 
@@ -16,14 +15,20 @@ h1, h2, h3, h4{
 }
 
 h1{
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 20px;
 }
 h2{
     font-weight: 400;
+    font-size: 18px;
 }
 
 ul{
 
+}
+
+p{
+    font-size: 12px;
 }
 
 a{
@@ -31,6 +36,12 @@ a{
     color: white;
 }
 
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 /*divs*/
 
 .main-content{

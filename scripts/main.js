@@ -117,5 +117,3 @@ setTimeout(function(){
     }
 }, 9700);
 
-console.log(topText1);
-console.log(topText2);
