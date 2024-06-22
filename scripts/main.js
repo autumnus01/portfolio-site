@@ -4,10 +4,13 @@ var headerElement2 = document.getElementById("top-text-2");
 var mainText = document.getElementById("main-text");
 var projectsLink = document.getElementById("projects-link");
 var aboutLink = document.getElementById("about-link");
+var aboutText = document.querySelector(".main-content #about");
 const topText1 = "autumn hurley".split('');
 const topText2 = "// web developer ".split('');
 const link1 = "> projects".split('');
 const link2 = "> about".split('');
+var aboutActive = false;
+var projectsActive = false;
 
 for(let n = 0; n < 7; n++){
     setTimeout(function(){
@@ -117,3 +120,16 @@ setTimeout(function(){
     }
 }, 9700);
 
+//click listeners for links
+aboutLink.addEventListener("click", () =>{
+    if (!aboutActive) {
+        aboutActive = true;
+        aboutLink.innerHTML="v about";
+        aboutLink.style.color="white";
+    }
+    else {
+        aboutActive = false;
+        aboutLink.innerHTML="> about";
+        aboutLink.style.color="";
+    }
+});

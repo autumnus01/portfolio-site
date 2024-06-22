@@ -7,7 +7,6 @@
 body{
     /*redo using grid layout*/
     font-family: 'Roboto Mono';
-    color: white;
 }
 
 h1, h2, h3, h4{
@@ -33,7 +32,7 @@ p{
 
 a{
     text-decoration: none;
-    color: white;
+    color: gray;
 }
 
 canvas{
@@ -53,12 +52,22 @@ canvas{
 .main-content ul{
     list-style-type: none;
 }
-.main-content li{
-    transition: 0.3s;
+.main-content a{
+    transition: color 0.2s , translate 0.3s;
 }
-.main-content li:hover{
-    color: lightgray;
+.main-content a:hover{
+    animation: fadein 0.2s ease-out 1;
+    color: white;
     translate: 5px 0px;
+}
+.main-content #about{
+    padding:5px;
+    color: white;
+    outline: white 1px solid;
+    margin-right: 60%;
+    scale: 0;
+    opacity: 0;
+    transition: 0.2s;
 }
 
 .header{
@@ -84,6 +93,17 @@ canvas{
 }
 .header a h1, .header a h2{
     display: inline-block;
+}
+
+@keyframes fadein {
+    0%{ 
+        color: gray;
+        translate: 0px 0px;
+    }
+    100%{ 
+        color: white;
+        translate: 5px 0px;
+    }
 }
 
 

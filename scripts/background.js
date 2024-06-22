@@ -30,12 +30,13 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 const geometry = new THREE.IcosahedronGeometry(8, 0);
 const material = new THREE.MeshStandardMaterial({color: 0xffffff, wireframe: false});
 const icosahedron = new THREE.Mesh(geometry, material);
+icosahedron.position.set(10,0,0);
 scene.add(icosahedron);
 
 //lighting
 const point = new THREE.PointLight(0xffffff, 1000, 100);
 const ambient = new THREE.AmbientLight(0x404040, 0.2);
-point.position.set(15, 12, 15);
+point.position.set(25, 12, 15);
 scene.add(point);
 scene.add(ambient);
 
@@ -66,13 +67,13 @@ animate();
 
 //fun lil animations for hovering over shit
 projectsLink.addEventListener("mouseover", () =>{
-	transitionRotationSpeed(13);
+	transitionRotationSpeed(19);
 });
 projectsLink.addEventListener("mouseout", () =>{
 	transitionRotationSpeed(1);
 });
 aboutLink.addEventListener("mouseover", () =>{
-	transitionRotationSpeed(-13);
+	transitionRotationSpeed(-19);
 });
 aboutLink.addEventListener("mouseout", () =>{
 	transitionRotationSpeed(1);
@@ -81,7 +82,7 @@ aboutLink.addEventListener("mouseout", () =>{
 function transitionRotationSpeed(target) {
 	var test = 0;
 	new TWEEN.Tween(rotationMultiplier)
-		.to({value: target}, 550)
+		.to({value: target}, 575)
 		.easing(TWEEN.Easing.Quadratic.Out)
 		.start()
 }
